@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="Kije’s LAB" />
+<meta name="keywords" content="template, theme, portfolio, developer" />
+<meta name="description" content="One Page Template for Developer Portfolio" />
+<!-- <title>One Page Template for Developer Portfolio</title> -->
+<title>Exception을 좋아하는 개발자 김창배 입니다.</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;500;800&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<link rel="stylesheet" href="/myPortPolio/resources/css/style.css" />
+<link rel="stylesheet" href="/myPortPolio/resources/css/theme.css" />
+<link rel="stylesheet" href="/myPortPolio/resources/css/theme-dark.css" media="(prefers-color-scheme: dark)">
+<style>
+span.lib{
+	background-color: mediumvioletred;
+}
+
+span.db{
+
+	background-color: skyblue;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  /* background-color: rgba(0,0,0,0.8); */
+  background-color: lightgray;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+/* .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+} */
+
+@keyframes divfade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+div.sectionInfo{
+	text-align: left;  
+	width: 100%;  
+	margin-left: 20px;  
+	font-size: 12pt!important;
+	color : black!important;
+	font-weight: normal!important;
+	text-transform: capitalize;
+}
+
+</style>
+</head>
+<body>
+	<!-- Header 시작 -->
+	<header>
+		<div class="container">
+			<h2 style="margin-left : -100px; letter-spacing: -0.05em; font-weight: 100; text-shadow: 0 1px 0 #ccc, 0 6px 1px rgb(0 0 0 / 10%), 0 0 5px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 30%), 0 3px 5px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 20%), 0 20px 20px rgb(0 0 0 / 15%); color: #ffffff;">
+				Exception을 좋아하는 개발자 <strong>김창배</strong> 입니다.
+			</h2>
+		</div>
+	</header>
+	<!-- Header 끝 -->
+	<!-- Navbar 시작 -->
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container-fluid text-uppercase">
+			<a class="navbar-brand" href="#">KIM CHANG BAE</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse sticky-fixed" id="navbarNav">
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
+					<li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
+					<li class="nav-item"><a class="nav-link" href="#stacks">Stacks</a></li>
+					<!-- <li class="nav-item"><a class="nav-link" href="#education">Education</a></li> -->
+					<li class="nav-item"><a class="nav-link" href="#document">Document</a></li>
+					<!-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
+				</ul>
+				<form class="d-flex">
+					<div class="btn-box">
+						<!-- <a href="https://restpack.io/html2pdf/save-as-pdf" class="btn btn-3" target="_blank">SAVE PDF</a> -->
+					</div>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<!-- Navbar 끝 -->
+	<!-- Main 시작 -->
+	<main>
+		<!-- Summary 시작 -->
+		<section class="container pt mt" id="summary">
+			<div class="row">
+				<div class="col-lg-8 mx-auto text-center">
+					<h2 class="section-header fonsiz-xxxl fonwei-en-xxl letsp-sm text-upper color-basic">Summary</h2>
+					<p class="color-basic fonsiz-xl fonwei-kr-xs letsp-xs ws-sm mt-4">
+						안녕하세요. <span class="fonwei-en-xl letsp-md">Java, Jsp</span>개발자 류준열입니다. 저는 올해 32살이며, 상상하는 것을 만들 수 있다는 것에 매력을 느껴 <span class="fonwei-en-xl letsp-md">Hardcore Coding Style</span>에 중독되어 버린 젊은 청춘입니다. 린 스타트업 <span class="letsp-md">(Lean Startup)</span> , 린 사고방식 <span class="letsp-md">(Lean Thinking)</span>, 애자일 <span class="letsp-md">(Agile)</span> 방법론 등, <span class="fonwei-kr-md"> 개발자를 창조적으로 괴롭히는 혁신적인 방식</span>을 <span class="fonwei-kr-md">사랑</span>합니다.
+					</p>
+				</div>
+			</div>
+		</section>
+		<!-- Summary 끝 -->
+		<!-- Project 시작 -->
+		<section class="container pt mt" id="project">
+			<h2 class="section-header fonsiz-xxxl fonwei-en-xxl letsp-sm text-upper color-basic">Project</h2>
+			<div class="section-desc fonsiz-sm color-basic-opac letsp-sm ws-xs mt-2 mb-4">저는 프로젝트의 시작보다는 마무리에 집중합니다. 한번 시작한 프로젝트는 혼자라도 반드시 마무리합니다.</div>
+			<div class="card shadow">
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table borderless table-hover align-middle">
+							<thead class="border-0 borderless" border="0">
+								<tr class="fonsiz-sm fonwei-kr-md letsp-sm color-basic-opac text-center vertmid">
+									<th>프로젝트</th>
+									<th>소개</th>
+									<th>개발 참여도</th>
+									<th>추가 정보</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th class="table-title" scope="col">Zero Trust 재택근무통합보안솔루션</th>
+									<td>
+										<div>[ESCARE] Zero Trust 재택근무통합보안솔루션</div>
+										<div>#VPN #보안 #IPSEC #OTP #WFA</div>
+										<div>
+											<span class="badge bg-done">Done</span> 
+											<span class="badge bg-grey">Java</span> 
+											<span class="badge bg-grey">JavaScript</span> 
+											<span class="badge bg-grey">Jquery</span>
+											<span class="badge lib">DevExtreme</span> 
+											<span class="badge bg-grey">HTML5 and CSS3</span> 
+											<span class="badge bg-grey">Bootstrap 4</span> 
+											<span class="badge bg-grey">Tomcat</span> 
+											<span class="badge bg-grey">Spring Boot</span> 
+											<span class="badge db">PostgreSql</span> 
+										</div>
+									</td>
+									<td class="text-center">
+										<div class="">( 30 M/M)</div>
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped bg-info" style="width: 100%">
+												<span class="progress-desc">100%</span>
+											</div>
+										</div>
+										<div class="progress-desc">백엔드 & 프론트엔드 개발</div>
+									</td>
+									<td class="text-center"><span class="text-muted" data-bs-toggle="modal" data-bs-target="#Modal1"> <i class="bi bi-file-earmark-slides"></i>
+											<div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="Modal1Label" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content" style="width: 1500px; left: -95%; height: auto;">
+														<div class="modal-header">
+															<h5 class="modal-title" id="Modal1Label">자사제품 - Zero Trust 재택근무통합보안솔루션 신규 개발</h5>
+															<div class="pageCountDiv" style="width: 100px;  font-size: 11pt; color: black!important; font-weight: bold; width: 965px; text-align: right;">
+																<div id="currentVPNPage" style="display: inline-block; font-size: 11pt; font-weight: bold;"></div>
+																/
+																<div id="totalVPNPage" style="display: inline-block; color: black!important; font-size: 11pt; font-weight: bold;"></div>
+															</div>
+															<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+														</div>
+														<div class="modal-body">
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="vpnSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/ztvpn/1.PNG" alt="pp0" />
+															  			<p class="modal-desc">
+																		- 프로젝트 개요
+																		</p>
+																		<div class="sectionInfo">
+																			코로나 팬데믹 이후 보편화 된 재택근무를 시행하는 공공기관 및 기업 등에서 보다 원활한 재택근무 환경을 위해 VPN, SSL-VPN, VDI 등의 솔루션들을 사용하고 있습니다. <br/>
+																			SK하이닉스에서 접근통제시스템을 개발/운영하면서 얻은 경험과 기술을 바탕으로, 기본설계부터 개발까지 모든 부분을 팀원들과 함께 프로젝트를 진행하였습니다. <br/>
+																			ZT의 약자는 Zero-Trust로 4단계 인증을 통해 Zero Trust를 실현을 목표로 하였습니다. IT 시스템에 접근을 하기 위해서, 즉 접근 허가를 받기 위해서 먼저 사용자가 누구인지, <br/>
+																			혹은 단말기가 안전한 허가를 받은 단말기인지, 그리고 어떤 접근 권한을 갖고 있는지 등 모든 유효성을 다 입증한 다음에 일회성 내부 접근 통제 정책을 받아서 접근 허가를 수락하게 됩니다. <br/>
+																			
+																			 
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="vpnSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/ztvpn/2.PNG" alt="pp0" />
+															  			<p class="modal-desc">
+																		- 담당업무
+																		</p>
+																		<div class="sectionInfo">
+																			* 관리자가 재택근무 현황을 볼 수 있는 대시보드 화면입니다.<br>
+																			* 금일 재택근무 접속한 사용자의 수, 재택근무 승인건 수, 차단 건수, 미승인 건수를 상단에 표기하여 관리 할 수 있다<br>
+																			* 일일 재택근무 현황을 최근 30일 이내의 접속한 사용자의 수, 접속권한이 있는 사용자의 수를 차트화 했습니다.<br>
+																			* 재택근무 접속자 수, 총 접속 건수, 차단 건수 등 통계 데이터는 DB 조회로 화면에 보여주고 있습니다.<br/>
+																			* HighChart 라이브러리 사용하여 재택근무 현황에 보여주고 있습니다.
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="vpnSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/ztvpn/3.PNG" alt="pp0" />
+															  			<p class="modal-desc">
+																		- 담당업무
+																		</p>
+																		<div class="sectionInfo">
+																			* ZT-VPN 재택근무 사용자의 화면이며 본인의 재택근무 신청현황을 볼 수 있는 화면입니다.<br/>
+																			* 좌측은 재택근무 신청현황, 재택근무 신청, 부서시스템으로 구성되어 있습니다.<br/>
+																			* DevExtreme (유료라이브러리)를 사용하여 데이터 조회 테이블을 구현하였습니다. 
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="vpnSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/ztvpn/4.PNG" alt="pp0" />
+															  			<p class="modal-desc">
+																		- 담당업무
+																		</p>
+																		<div class="sectionInfo">
+																			* 사용자가 재택근무를 하기 위하여 신청하는 화면입니다.<br>
+																			* 신청자, 원격접속정보, 사내업무서버를 선택 할 수 있게 Layout이 구성되어 있습니다.<br/>
+																			* 사내업무서버는 기존 관리자가 사내 IP목록을 별도 관리자 화면에서 저장 후 사용자가 선택하여 고를 수 있게 되있습니다.<br>
+																			* 내용에 맞춰 양식을 작성하고 "저장" 버튼을 클릭하면 보안서약서 알림 팝업을 출력 후 내용 정독 후 서명을 받는 방향으로 구현하였습니다.<br>
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="vpnSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/ztvpn/5.PNG" alt="pp0" />
+															  			<p class="modal-desc">
+																		- 담당업무
+																		</p>
+																		<div class="sectionInfo">
+																			* 사용자가 재택근무 신청을 한 후 현황 페이지에서 다음과 같이 화면에 출력됩니다.<br>
+																			* "승인 여부" 컬럼엔 승인대기 또는 취소가 가능하며 이후 담당자가 승인을 하게되면 승인완료가 되어 본인이 신청한 시스템에 대해 재택근무가 가능합니다.<br>
+																			* 사용자 본인이 어떤 정보로 어떤 시점, 접속 지역, 사유, 사용 기간 등 정보를 보는게 주 목적입니다.<br>
+																			* DevExtreme (유료라이브러리)를 사용하여 데이터 조회 테이블을 구현하였습니다. 
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="vpnSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/ztvpn/6.PNG" alt="pp0" style="width : 100%;"/>
+															  			<p class="modal-desc">
+																		- 담당업무
+																		</p>
+																		<div class="sectionInfo">
+																			* 관리자가 사용자들의 재택근무 신청현황을 볼 수 있는 화면입니다.<br>
+																			* 관리자가 직접 다루는 화면이므로 신청건을 직접 "승인", "반려"가 가능합니다.<br>
+																			* 각 사용자들이 어떤 정보로 어떤 시점, 접속 지역, 사유, 사용 기간 등 모든 신청자 정보를 보는 것이 주 목적입니다.<br>
+																			* DevExtreme (유료라이브러리)를 사용하여 데이터 조회 테이블을 구현하였습니다.<br>
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="vpnSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/ztvpn/7.PNG" alt="pp0"/>
+															  			<p class="modal-desc">
+																		- 담당업무
+																		</p>
+																		<div class="sectionInfo">
+																			* 사내 내부 PC의 내부 접근 통제를 위한 정책 생성하는 과정입니다.<br>
+																			* 사용자가 승인을 받고 외부 PC에서 로그인 후 사내 PC로 원격 접속을 할때 서버에서는 내부 PC의 접근제어 정책을 생성하게 됩니다.<br>
+																			* 접근제어 정책은 윈도우 로컬 보안 정책 중 IP 보안 정책으로 제어를 하게 됩니다. 정책은 사용자가 신청한 시스템을 DB에서 가져와 프로토콜, IP, 포트를 조합하여 만들게 됩니다.<br>
+																			* 만들어진 정책은 내부 Agent로 전송하게 되며 Agent는 정책을 읽어 netsh 명령어를 통해 로컬 보안 정책을 생성합니다.<br>
+																			* DB에서 신청 시스템 조회 , 정책 생성 및 정책 전송 까지 SK 하이닉스 접근통제 시스템에서 경험을 바탕으로 구현하였습니다. 
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="vpnSlides divfade">
+																	<p class="modal-desc">
+																		- 화면 및 기능 설계 (Ex)
+																	</p>
+																	<div class="sectionInfo" style="font-weight: 500;">
+																		* 화면 설계, 단위기능 설계 방법과 과정 중 일부입니다. ( 참고용으로 봐주시면 감사하겠습니다. ^^ )<br/>
+																	</div>		
+																	
+																																
+																	<div>
+																  		<img src="/myPortPolio/resources/assets/img/ztvpn/8.PNG" alt="pp0" style="width : 100%;" />																  			
+																	</div>
+																	
+																	<hr>
+																	
+																	<p class="modal-desc">
+																		- 관리자 재택근무 신청현황 화면 설계
+																	</p>
+																	<div class="sectionInfo">
+																		* 관리자가 화면에서 어떤 작업을 할지 시나리오를 작성한다.<br>
+																		* 시나리오를 그리고 버튼, 액션시 발생하는 이벤트를 스케치한다.
+																	</div>	
+																	
+																	<div style="margin-top : 30px;">
+																		<img src="/myPortPolio/resources/assets/img/ztvpn/9.PNG" alt="pp0" style="width : 100%;"  />
+																	</div>
+																	
+																	<hr>
+																	
+																	<p class="modal-desc">
+																		- 사용자 재택근무 신청 화면 설계
+																	</p>
+																	<div class="sectionInfo">
+																		* 기존화면에 기능을 추가하거나 변경이 필요할 때 시나리오를 작성한다.<br>
+																		* 추가화면이 어디에 배치할지, 추가기능시 어떻게 동작할지 기존화면에 스케치한다.
+																	</div>	
+																	
+																	<div style="margin-top : 30px;">
+																		<img src="/myPortPolio/resources/assets/img/ztvpn/10.PNG" alt="pp0" style="width : 100%;" />
+																	</div>
+																	
+																</div>
+															</div>
+															
+															<a class="prev" onclick="plusVPNSlides(-1)" style="color : #0d6efd!important; left : 0; text-decoration: none;">❮</a>
+															<a class="next" onclick="plusVPNSlides(1)" style="color : #0d6efd!important; text-decoration: none;">❯</a>
+														</div>
+														
+														<br/>
+															<div style="text-align:center">
+															  <span class="vpndot dot" onclick="currentVPNSlide(1)"></span> 
+															  <span class="vpndot dot" onclick="currentVPNSlide(2)"></span> 
+															  <span class="vpndot dot" onclick="currentVPNSlide(3)"></span> 
+															  <span class="vpndot dot" onclick="currentVPNSlide(4)"></span> 
+															  <span class="vpndot dot" onclick="currentVPNSlide(5)"></span> 
+															  <span class="vpndot dot" onclick="currentVPNSlide(6)"></span> 
+															  <span class="vpndot dot" onclick="currentVPNSlide(7)"></span> 
+															  <span class="vpndot dot" onclick="currentVPNSlide(8)"></span> 
+															</div>
+														
+														<div class="modal-footer">
+															<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="color : white;">Close</button>
+														</div>
+													</div>
+												</div>
+											</div>
+									</span></td>
+								</tr>
+								<tr>
+									<th class="table-title" scope="col">통합 로그 관리 시스템</th>
+									<td>
+										<div>[SK Hynix] 통합 로그 관리 시스템</div>
+										<div>#통합로그 #로그수집 #로그관리 #이벤트관리 #Syslog #통계 #SI</div>
+										<div>
+											<span class="badge bg-done">Done</span> 
+											<span class="badge bg-grey">Java</span> 
+											<span class="badge bg-grey">JavaScript</span> 
+											<span class="badge bg-grey">Jquery</span>
+											<span class="badge lib">DataTables</span> 
+											<span class="badge bg-grey">HTML5 and CSS3</span> 
+											<span class="badge bg-grey">Bootstrap 4</span> 
+											<span class="badge bg-grey">Tomcat</span> 
+											<span class="badge bg-grey">Spring MVC</span> 
+											<span class="badge db">Oracle</span> 
+										</div>
+									</td>
+									<td class="text-center">
+										<div class="">( 8 M/M)</div>
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped bg-info" style="width: 100%">
+												<span class="progress-desc">100%</span>
+											</div>
+										</div>
+										<div class="progress-desc">백엔드 & 프론트엔드 개발</div>
+									</td>
+									<td class="text-center"><span class="text-muted"> <i class="bi bi-file-earmark-slides" style="cursor : not-allowed;"></i>
+										<div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="Modal1Label" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content" style="width: 1100px; left: -250px; height: 700px;">
+														<div class="modal-header">
+															<h5 class="modal-title" id="Modal1Label">프로젝트 - 통합 로그 관리 시스템</h5>
+															<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+														</div>
+														<div class="modal-body">
+															<!-- <img src="/myPortPolio/resources/assets/svg/your-project.svg" alt=""> -->
+															<div>
+																<div style="width: 32%; display: inline-block;">
+																Area 1
+																</div>
+																<div style="width: 33%; display: inline-block;">
+																Area 2
+																</div>
+																<div style="width: 33%; display: inline-block;">
+																Area 3
+																</div>
+															</div>
+															<div>
+																<div style="width: 32%; display: inline-block;">
+																Area 4
+																</div>
+																<div style="width: 33%; display: inline-block;">
+																Area 5
+																</div>
+																<div style="width: 33%; display: inline-block;">
+																Area 6
+																</div>
+															</div>
+															
+															<p class="modal-desc">
+																- 담당업무
+															</p>
+															<div class="sectionInfo">
+																1. 로그인 <br	>
+																2. Google Oauth 인증
+															</div>
+														</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+														</div>
+													</div>
+												</div>
+											</div>
+									</span></td>
+								</tr>
+								<tr>
+									<th class="table-title" scope="col">접근통제 시스템 WFA</th>
+									<td>
+										<div>[SK Hynix] 접근통제 시스템 WFA</div>
+										<div>#WFA #IPSEC #접근통제 #NetSh #보안 #SI</div>
+										<div>
+											<span class="badge bg-done">Done</span> 
+											<span class="badge bg-grey">Java</span> 
+											<span class="badge bg-grey">JavaScript</span> 
+											<span class="badge bg-grey">Jquery</span>
+											<span class="badge lib">DataTables</span> 
+											<span class="badge bg-grey">HTML5 and CSS3</span> 
+											<span class="badge bg-grey">Bootstrap 4</span> 
+											<span class="badge bg-grey">Tomcat</span> 
+											<span class="badge bg-grey">Spring MVC</span> 
+											<span class="badge db">Cubrid DB</span> 
+											<span class="badge db">DB 이중화</span> 
+										</div>
+									</td>
+									<td class="text-center">
+										<div class="">( 18M/M )</div>
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped bg-info" style="width: 100%">
+												<span class="progress-desc">100%</span>
+											</div>
+										</div>
+										<div class="progress-desc">백엔드 개발</div>
+									</td>
+									<td class="text-center"><span class="text-muted" data-bs-toggle="modal" data-bs-target="#Modal3"> <i class="bi bi-file-earmark-slides"></i>
+										<div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="Modal1Label" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content" style="width: 1500px; left: -95%; height: auto;">
+														<div class="modal-header">
+															<h5 class="modal-title" id="Modal1Label">SI - 접근통제 시스템 WFA</h5>
+															<div class="pageCountDiv" style="width: 100px;  font-size: 11pt; color: black!important; font-weight: bold; width: 1170px; text-align: right;">
+																<div id="currentWFAPage" style="display: inline-block; font-size: 11pt; font-weight: bold;"></div>
+																/
+																<div id="totalWFAPage" style="display: inline-block; color: black!important; font-size: 11pt; font-weight: bold;"></div>
+															</div>
+															<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+														</div>
+														<div class="modal-body">
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="wfaSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/wfa/1.PNG" alt="wfa0" />
+															  			<p class="modal-desc">
+																		- 프로젝트 개요
+																		</p>
+																		<div class="sectionInfo">
+																			하이닉스 근무자의 외부 단말이 내부로 접속하여 업무를 해야 하는 환경에 단말 무결성 검증 및 단말 상태에 따른 내부 접속 권한 관리 보안체계를 적용하여<br/> 
+																			내부 접속의 보안 리스크를 해소하고 단말 상태에 따른 차별화된 네트워크 접근 통제 환경 구성 방안을 제안 합니다. <br/>
+																			해당 프로젝트는 WFA Server & Agent로 구성되어 있으며 Server측 단위기능 설계 및 개발만 진행하였습니다.<br/>  
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="wfaSlides divfade">
+															  		<p class="modal-desc">
+																		- 화면 및 기능 설계 (Ex)
+																	</p>
+																	<div class="sectionInfo" style="font-weight: 500;">
+																		<div style="display : inline-block; color : red; font-weight : bold;">
+																			* SI 프로젝트로 소스 코드 및 작업 내용은 고객사내에 구축되있어 개발 전 설계 자료만 첨부합니다.
+																		</div>
+																	</div>		
+																	
+																	
+																	<hr>
+																	<hr>
+																	
+																	<p class="modal-desc">
+																		◎  WFA 서버 관리자 콘솔 샘플 화면
+																	</p>
+																	<div class="sectionInfo">
+																		* 전반적인 디자인은 PowerPack 서버 관리자 콘솔 화면을 가져간다.<br>
+																		* 외부에서 접속하는 사용자의 정보를 알기위한 메뉴와 WFA 운영에 필요한 시스템들을 관리하는 메뉴로 구성한다.<br>
+																	</div>	
+																	
+																	
+																	<div style="margin-top : 30px;">
+																		<img src="/myPortPolio/resources/assets/img/wfa/2.PNG" alt="pp0" />
+																	</div>
+																	
+																	
+																	<hr>
+																	
+																	
+																	<p class="modal-desc">
+																		◎ Server <-> Agent간 통신
+																	</p>
+																	<div class="sectionInfo">
+																		* Agent는 내부단말 PC에 배포시스템을 통해 이미 설치가 되어있다.<br>
+																		* Server와 Agent는 1분마다 통신을하며 정책 전송은 외부에서 사용자가 접속한 경우에만 Push한다.<br>
+																		* 정책이 전송되지 못하는 조건 ( Timeout, 재전송 , 기타 오류 )의 경우를 파악 후 전송될 수 있도록 한다.
+																	</div>
+																	
+																	
+																	<div style="margin-top : 30px;">
+																		<img src="/myPortPolio/resources/assets/img/wfa/3.PNG" alt="pp0" />
+																	</div>
+																	
+																	<hr>
+																	
+																	
+																	
+																	<p class="modal-desc">
+																		◎ 접속 신청 정보에 대한 DB 및 화면 설계 시나리오
+																	</p>
+																	<div class="sectionInfo">
+																		* 부서별로 어떤 시스템을 쓸지 매핑 정보를 기록한다.<br>
+																		* 서버와 DB간 동작 시나리오를 만든다.<br>
+																	</div>
+																	
+																	
+																	<div style="margin-top : 30px;">
+																		<img src="/myPortPolio/resources/assets/img/wfa/4.PNG" alt="pp0" />
+																	</div>
+																</div>
+															</div>
+															
+															
+															<a class="prev" onclick="plusWFASlides(-1)" style="color : #0d6efd!important; left : 0; text-decoration: none;">❮</a>
+															<a class="next" onclick="plusWFASlides(1)" style="color : #0d6efd!important; text-decoration: none;">❯</a>
+														</div>
+														
+														<br/>
+															<div style="text-align:center">
+															  <span class="wfadot dot" onclick="currentWFASlide(1)"></span> 
+															  <span class="wfadot dot" onclick="currentWFASlide(2)"></span> 
+															</div>
+														
+														<div class="modal-footer">
+															<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="color : white;">Close</button>
+														</div>
+													</div>
+												</div>
+											</div>
+									</span></td>
+								</tr>
+								<tr>
+									<th class="table-title" scope="col">EndPoint 보안솔루션 개발 및 유지 보수</th>
+									<td>
+										<div>[ESCARE] EndPoint 보안솔루션 신규개발 및 유지 보수</div>
+										<div>#DLP #SEP #PrintChaser #파일반출 #통합결재 #인사연동 #SM</div>
+										<div>
+											<span class="badge bg-inprogress">System Maintenance</span> 
+											<span class="badge bg-grey">Java</span> 
+											<span class="badge bg-grey">JavaScript</span> 
+											<span class="badge bg-grey">Jquery</span>
+											<span class="badge lib">DataTables</span> 
+											<span class="badge bg-grey">HTML5 and CSS3</span> 
+											<span class="badge bg-grey">Bootstrap 4</span> 
+											<span class="badge bg-grey">Tomcat</span> 
+											<span class="badge bg-grey">Spring MVC</span> 
+											<span class="badge db">Cubrid DB</span> 
+											<span class="badge db">Mssql</span> 
+											<span class="badge db">Oracle</span> 
+										</div>
+									</td>
+									<td class="text-center">
+										<div class="">( ~M/M)</div>
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped bg-info" style="width: 100%">
+												<span class="progress-desc">100%</span>
+											</div>
+										</div>
+										<div class="progress-desc">유지보수중</div>
+									</td>
+									<td class="text-center"><span class="text-muted" data-bs-toggle="modal" data-bs-target="#Modal4"> <i class="bi bi-file-earmark-slides"></i>
+										<div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="Modal1Label" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content" style="width: 1500px; left: -95%; height: auto;">
+														<div class="modal-header">
+															<h5 class="modal-title" id="Modal1Label">자사제품 - EndPoint 보안솔루션 개발 및 유지 보수</h5>
+															<div class="pageCountDiv" style="width: 100px;  font-size: 11pt; color: black!important; font-weight: bold; width: 1025px; text-align: right;">
+																<div id="currentPPPage" style="display: inline-block; font-size: 11pt; font-weight: bold;"></div>
+																/
+																<div id="totalPPPage" style="display: inline-block; color: black!important; font-size: 11pt; font-weight: bold;"></div>
+															</div>
+															<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+														</div>
+														<div class="modal-body">
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="ppSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/pp/0.PNG" alt="pp0" />
+															  			<p class="modal-desc">
+																		- 프로젝트 개요
+																		</p>
+																		<div class="sectionInfo">
+																			PowerPack은 Symantec 솔루션을 엔진으로 활용하여 Symantec 보안솔루션의 기능을 더욱더 극대화하여 활용할 수 있도록 제공하고 보안업무 프로세스를 세워주는 역할을 합니다.  <br/>
+																			주요 개인정보 검출 솔루션인 DLP와  USB, CD와 같은 이동식 매체제어 솔루션인 SEP, 출력물 로깅을 하는 PrintChaser를 승인시스템을 묶어 단말 통합 모니터링을 하는 솔루션 입니다.<br/>
+																			여러 외산 제품을 사용하다보면 관리포인트가 늘어나고 사용자마다 또는 제품마다 별도 설정을 해야하는 번거로움이 있어 이를 관리포인트를 줄여주는 것이 PowerPack 제품 입니다. <br/>
+																			위 이미지에서 "파워팩 서버" 를 담당하여 추가 기능 개발 & 유지 보수를 담당하였습니다.
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="ppSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/pp/1.PNG" alt="pp0" />
+															  			<p class="modal-desc">
+																		- 담당업무
+																		</p>
+																		<div class="sectionInfo">
+																			* PowerPack 관리자 콘솔의 메인화면인 대시보드이며 매체권한, 개인정보, 파일반출의 현황을 보여주는 화면입니다.<br>
+																			* 상단 4개의 현황은 현재 승인대기건이 몇건인지, 완료/반려/취소가 된 건이 몇건인지, 접속중인 Agent의 개수, 총 설치된 Agent의 개수를 나타냅니다.<br/>
+																			* 승인완료된 건의 추이를 볼 수 있는 차트는 HighChart 라이브러리 사용했습니다.
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="ppSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/pp/2.PNG" alt="pp0" />
+															  			<p class="modal-desc">
+																		- 담당업무
+																		</p>
+																		<div class="sectionInfo">
+																			* 매체제어 운영 현황을 보여주는 화면으로 Symantec Endpoint Protection를 어떤 그룹으로 현재 운영하는지 보여주는 화면입니다.<br>
+																			* 대시보드 화면에서 "매체제어"를 클릭한 경우 볼 수 있으며 상단 checkbox, select ~ option으로 조회조건에 따라 데이터가 보여집니다.<br>
+																			* "매체제어"의 경우 SEP에서 설정된 정책에 따라 승인된 매체를 사용 할 수 있기에 어떤 매체가 얼마나 승인 되어 사용하는지가 가장 중요한 지표 입니다.<br>
+																			* 기본정책인 "매체차단"이 가장 많고 그 외 USB,CD/DVD와 같이 승인되어 사용중인 건이 얼마나 있는지 확인 할 수 있습니다.<br>
+																			* HighChart 라이브러리 사용하여 막대 그래프 작업을 했습니다.
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="ppSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/pp/3.PNG" alt="pp0" />
+															  			<p class="modal-desc">
+																		- 담당업무
+																		</p>
+																		<div class="sectionInfo">
+																			* 주요 개인정보 소명 데이터를 월별 추이를 볼 수 있는 화면이다. 각 사용자 PC에 검출된 개인정보 데이터양을 취합하여 차트화 시킨 화면입니다.<br>
+																			* 대시보드 화면에서 "개인정보"를 클릭한 경우 볼 수 있으며 조회조건을 부서별 또는 사용자를 검색하여 조회 할 수 있습니다.<br>
+																			* 월별로 얼마나 검출되었고 어떻게 후처리를 하였는지를 확인하는 것이 주 목적입니다. <br>
+																			* HighChart 라이브러리 사용하여 막대 그래프 작업을 했습니다.
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="ppSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/pp/4.PNG" alt="pp0" />
+															  			<p class="modal-desc">
+																		- 담당업무
+																		</p>
+																		<div class="sectionInfo">
+																			* 최근 1달간 전체사용자의 주요 개인정보가 어떤 정책에 의해 몇건이 걸렸는지를 보여주는 화면입니다. <br>
+																			* 각 날짜별로 데이터 카운트를 해주며 녹색은 양호, 노랑은 위험, 빨강은 긴급 등으로 각 라벨별로 데이터를 조회합니다.<br>
+																			* 전사 개인정보 정책에 따라 개인정보 검출 추이를 확인하는 것이 주 목적입니다.<br>
+																			* HighChart 라이브러리 사용하여 막대 그래프 작업을 했습니다.
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="ppSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/pp/5.PNG" alt="pp0" style="width : 100%;"/>
+															  			<p class="modal-desc">
+																		- 담당업무
+																		</p>
+																		<div class="sectionInfo">
+																			* 검출된 개인정보는 사용자가 담당자에게 왜 갖고있는지 "소명"을 해야하는데 어떤 파일을 소명하는지 볼 수 있는 화면입니다.<br>
+																			* 관리자가 사용하는 화면이며 상단 조건에 따라 부서별, 날짜별로 조회 할 수 있습니다.<br	>
+																			* 검출된 데이터들은 기본적으로 DataTables 라이브러리를 이용하여 데이터를 화면에 출력합니다.<br>
+																			* 테이블의 Row를 클릭하면 Data Loss Prevention ( DLP )에 API 통신으로 현재 해당 데이터가 어떤 데이터가 있으며 어떻게 걸렸는지 상세하게 볼 수 있습니다. <br>
+																		</div>
+																</div>
+															</div>
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="ppSlides divfade">
+															  		<img src="/myPortPolio/resources/assets/img/pp/6.PNG" alt="pp0" />
+															  			<p class="modal-desc">
+																		- 담당업무
+																		</p>
+																		<div class="sectionInfo">
+																			* 매체제어는 Symantec EndPoint Protection이라는 프로그램에 의해 제어되는데 이때 특정 매체를 사용하기 위해 신청을 하고 신청 승인 내역건을 보여줍니다.<br>
+																			* 승인이 완료되면 Symantec Endpoint Protection의 Group 정책을 변경해주고 사용자가 신청한 매체 (USB,CD)를 특정시간동안 사용할 수 있게 한다.<br>
+																			* Group 정책 변경은 SEP에 API를 이용하는것이 아닌 DB를 질의하여 정책 변경을 해주고 신청한 기간 동안 정책변경 후 본래 정책으로 되돌려 주는 기능을 합니다.<br>
+																			* Symantec Endpoint Protection의 Agent 화면에 Group이라는 정책이 변경됩니다.
+																		</div>
+																</div>
+															</div>
+															
+															
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="ppSlides divfade">
+																	<p class="modal-desc">
+																		- 화면 및 기능 설계 (Ex)
+																	</p>
+																	<div class="sectionInfo" style="font-weight: 500;">
+																		* 화면 설계, 단위기능 설계 방법과 과정 중 일부입니다. ( 참고용으로 봐주시면 감사하겠습니다. ^^ )<br/>
+																	</div>		
+																	
+																	
+																	<hr>
+																	<hr>
+																	
+																	<p class="modal-desc">
+																		◎ Syslog 기능 추가를 위한 화면 및 동작 흐름 설계 
+																	</p>
+																	<div class="sectionInfo">
+																		* 실제 운영하고 있는 관리자 콘솔화면에 추가되려는 기능이 어떻게 보여져야할지 스케치를 한다.<br>
+																		* Syslog 메시지 전달을 위해 필요한 항목을 사전에 체크하여 어떻게 설정하는게 좋을지 구성한다.<br>
+																		* 메시지 변수는 제품이 제공하는 기능 중 어떤항목을 메시지에 담아 보낼지 구성하여 클릭시 메시지에 담기도록 구현한다.
+																	</div>	
+																	
+																	
+																	<div style="margin-top : 30px;">
+																		<img src="/myPortPolio/resources/assets/img/pp/8.PNG" alt="pp0" />
+																	</div>
+																	
+																	
+																	<hr>
+																	
+																	
+																	<p class="modal-desc">
+																		◎ Syslog 기능 추가를 위한 화면 및 동작 흐름 설계 
+																	</p>
+																	<div class="sectionInfo">
+																		* Syslog 메시지 변수를 어떻게 전달할지 체크한다. 값이 있는 경우 없는 경우 등..<br>
+																		* 공통적으로 추출할 수 있는 기능을 확인하고 유형이나 상태가 변경하는 값을 구분하여 어떻게 보낼지 체크한다.<br>
+																	</div>
+																	
+																	
+																	<div style="margin-top : 30px;">
+																		<img src="/myPortPolio/resources/assets/img/pp/9.PNG" alt="pp0" />
+																	</div>
+																	
+																	<hr>
+																	
+																	
+																	
+																	<p class="modal-desc">
+																		◎ Syslog 기능 추가 후 운영하는 콘솔화면에 적용된 화면
+																	</p>
+																	<div class="sectionInfo">
+																		* Syslog 사용유무를 체크박스로 두고 활성화/비활성화 시키는 것으로 최종 변경<br>
+																		* 메시지변수는 공통을 두고 각 기능별로 세분화시켜 사용자가 필요한것을 체크하도록 변경<br>
+																	</div>
+																	
+																	
+																	<div style="margin-top : 30px;">
+																		<img src="/myPortPolio/resources/assets/img/pp/10.PNG" alt="pp0" />
+																	</div>
+																	
+																</div>
+															</div>
+															
+															<a class="prev" onclick="plusPPSlides(-1)" style="color : #0d6efd!important; left : 0; text-decoration: none;">❮</a>
+															<a class="next" onclick="plusPPSlides(1)" style="color : #0d6efd!important; text-decoration: none;">❯</a>
+														</div>
+														
+														<br/>
+															<div style="text-align:center">
+															  <span class="ppdot dot" onclick="currentPPSlide(1)"></span> 
+															  <span class="ppdot dot" onclick="currentPPSlide(2)"></span> 
+															  <span class="ppdot dot" onclick="currentPPSlide(3)"></span> 
+															  <span class="ppdot dot" onclick="currentPPSlide(4)"></span> 
+															  <span class="ppdot dot" onclick="currentPPSlide(5)"></span> 
+															  <span class="ppdot dot" onclick="currentPPSlide(6)"></span> 
+															  <span class="ppdot dot" onclick="currentPPSlide(7)"></span> 
+															  <span class="ppdot dot" onclick="currentPPSlide(8)"></span> 
+															</div>
+														
+														<div class="modal-footer">
+															<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="color : white;">Close</button>
+														</div>
+													</div>
+												</div>
+											</div>
+									</span></td>
+								</tr>
+								<tr>
+									<th class="table-title" scope="col">StemWeb</th>
+									<td>
+										<div>[카디날정보기술] 수학 콘텐츠 관리 및 분석 시스템 ( StemWeb )</div>
+										<div>#중등수학 #지식클래스 #문제집 관리 #수식</div>
+										<div>
+											<span class="badge bg-done">Done</span> 
+											<span class="badge bg-grey">Java</span> 
+											<span class="badge bg-grey">JavaScript</span> 
+											<span class="badge bg-grey">Jquery</span>
+											<span class="badge lib">DataTables</span> 
+											<span class="badge bg-grey">HTML5 and CSS3</span> 
+											<span class="badge bg-grey">Bootstrap 4</span>  
+											<span class="badge lib">Vis.js</span>  
+											<span class="badge lib">MathJax</span> 
+											<span class="badge lib">Amchart</span> 
+											<span class="badge bg-grey">Tomcat</span> 
+											<span class="badge bg-grey">Spring MVC</span> 
+											<span class="badge db">Mysql</span>
+										</div>
+									</td>
+									<td class="text-center">
+										<div class="">( 24M/M )</div>
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped bg-info" style="width: 100%">
+												<span class="progress-desc">100%</span>
+											</div>
+										</div>
+										<div class="progress-desc">백엔드 & 프론트엔드 개발</div>
+									</td>
+									<td class="text-center"><span class="text-muted" data-bs-toggle="modal" data-bs-target="#Modal5"> <i class="bi bi-file-earmark-slides"></i>
+										<div class="modal fade" id="Modal5" tabindex="-1" aria-labelledby="Modal1Label" aria-hidden="true">
+												<div class="modal-dialog">
+													<div class="modal-content" style="width: 1500px; left: -95%; height: auto;">
+														<div class="modal-header">
+															<h5 class="modal-title" id="Modal1Label">프로젝트 - StemWeb</h5>
+															<div class="pageCountDiv" style="width: 100px;  font-size: 11pt; color: black!important; font-weight: bold; width: 1250px; text-align: right;">
+																<div id="currentStemPage" style="display: inline-block; font-size: 11pt; font-weight: bold;"></div>
+																/
+																<div id="totalStemPage" style="display: inline-block; color: black!important; font-size: 11pt; font-weight: bold;"></div>
+															</div>
+															<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+														</div>
+														<div class="modal-body">
+															<div class="slideshow-container" style="max-width : 1300px;">
+																<div class="stemMySlides divfade">
+																  <img src="/myPortPolio/resources/assets/img/stem/0.PNG" alt="1" />
+																  	<p class="modal-desc">
+																	- 프로젝트 개요
+																	</p>
+																	<div class="sectionInfo">
+																		무료 온라인 수학교육 서비스인 "진단수학" 이라는 앱을 런칭하기 위해 수학 콘텐츠를 사전 관리가 필요합니다.<br/>
+																		각 학년별 수학 커리큘럼을 정리하고 , 수학 지식 객체 관리, 수학 문제집 편집 및 관리를 하기 위한 프로젝트가 바로 StemWeb 입니다.<br/>
+																		STEM은 Science, Technology, Engineering, Mathematics의 약자이며 과학적으로 분석하여 문제해결력을 높히기 위해 수학 지식 네트워크를 구축해 수학 학습에 적용합니다.<br/>
+																		본 프로젝트는 수학교육과/통계학 출신의 연구원들이 콘텐츠 관리를 위해 사용합니다.
+																	</div>
+																</div>
+																
+																<div class="stemMySlides divfade">
+																  <img src="/myPortPolio/resources/assets/img/stem/1.PNG" alt="1" />
+																  	<p class="modal-desc">
+																	- 담당업무
+																	</p>
+																	<div class="sectionInfo">
+																		* 수학 지식 객체를 관리하는 화면입니다.<br>
+																		* 지식 객체를 등록하고 상위, 하위 지식 객체를 매핑하여 각 객체간 관계도를 형성합니다.<br/>
+																		* 목록 출력에 사용하는 테이블은 DataTables 라이브러리 사용했습니다.
+																	</div>
+																</div>
+																
+																<div class="stemMySlides divfade">
+																  <img src="/myPortPolio/resources/assets/img/stem/2.PNG" alt="1" />
+																	  <p class="modal-desc">
+																		- 담당업무
+																		</p>
+																		<div class="sectionInfo">
+																			* 지식객체 등록을 하는 화면입니다.<br/>
+																			* 객체 등록은 일반 평문과 수식 입력을 위한 Latex가 있습니다.<br/>
+																			* Latex 수식은 사이트 내에 코드를 입력할 시 화면에는 수식으로 변경됩니다. <br/>
+																			   <div style="display : inline-block; color : blue;">&nbsp;&nbsp;Ex) Latex 수식인 \[x=\frac{-b\pm\sqrt{b^2 -4ac}}{2a}\] 를 입력할 시 근의 공식이 출력됩니다.</div><br/>
+																			* 수식 입력은 CkEditor 라이브러리를 사용하였으며 추가 Component인 MathJax 라이브러리를 사용했습니다.
+																		</div>
+																</div>
+																
+																<div class="stemMySlides divfade">
+																  <img src="/myPortPolio/resources/assets/img/stem/3.PNG" alt="1" style="width : 100%;"/>
+																  <p class="modal-desc">
+																	- 담당업무
+																	</p>
+																	<div class="sectionInfo">
+																		* 수학 지식 객체를 생성하였다면 객체간 전체 관계도를 보여주는 화면입니다.<br/>
+																		* 객체간 상관 관계 표현을 위한 VisJs 라이브러리 사용했습니다.<br>
+																		* 노드간 수치화된 관계 및 노드 위치를 별도로 저장할 수 있는 기능 구현했습니다.<br/>
+																		* 노트간 위치는 서버내의 Json 데이터로 별도 저장하여 Read/Write 했으며 노드간 행위는 제공된 문서를 참조하여 개발했습니다.
+																	</div>
+																</div>
+																
+																<div class="stemMySlides divfade">
+																  <img src="/myPortPolio/resources/assets/img/stem/4.PNG" alt="1" style="width : 85%;"/>
+																  <p class="modal-desc">
+																	- 담당업무
+																	</p>
+																	<div class="sectionInfo">
+																		* 교과과정 중 특정 학습단원 (최대공약수와 최소공배수) 카테고리에 지식객체를 매핑 후 지식 수준을 보정하는 화면입니다.<br/>
+																		* 마르코프 지식네트워크 모델 기반으로 개발된 모듈을 실행하면 평가데이터를 보정할 수 있다.<br/>
+																		* 지식 객체를 보정하는 작업은 수학/통계 출신 연구원들이 사용하게 된다.<br/> 
+																		* 객체간 상관 관계 표현을 위한 VisJs 라이브러리 사용했습니다.<br>
+																		* 평가 데이터를 차트화 시키기 위해 AmCharts 라이브러리 사용했습니다.
+																	</div>
+																</div>
+																
+																<div class="stemMySlides divfade">
+																  <img src="/myPortPolio/resources/assets/img/stem/5.PNG" alt="1" />
+																  	<p class="modal-desc">
+																	- 담당업무
+																	</p>
+																	<div class="sectionInfo">
+																		* 학습단원에 들어있는 문제를 관리하는 화면입니다.<br>
+																		* 특정 업체로 부터 제공 받은 문제를 교과과정-학습단원에 맞게 매핑하는 화면입니다.<br/>
+																		* 학습단원 트리를 구현하기 위해 JsTree 라이브러리를 사용했습니다.
+																	</div>
+																</div>
+																
+																<div class="stemMySlides divfade">
+																  <img src="/myPortPolio/resources/assets/img/stem/6.PNG" alt="1"/>
+																  <p class="modal-desc">
+																	- 담당업무
+																	</p>
+																	<div class="sectionInfo">
+																		* 앞전에 있는 "문제은행" 페이지에서 문제 번호를 클릭하면 출력되는 화면 입니다.<br/>
+																		* 문제 - 정답 - 해설로 매핑된 데이터들을 화면에 출력시킵니다.<br>
+																		* 학습단원에 있는 문제, 정답, 해설을 확인하는 기능 정도만 있습니다.
+																	</div>
+																</div>
+																
+																<div class="stemMySlides divfade">
+																  <img src="/myPortPolio/resources/assets/img/stem/8.PNG" alt="122" />
+																  <p class="modal-desc">
+																	- 담당업무
+																	</p>
+																	<div class="sectionInfo">
+																		* 앞전에 있는 "문제은행" 에서 수정 버튼을 클릭시 출력되는 화면 입니다.<br/>
+																		* 난이도 / 문제유형 / 상태 / 의견을 작성하여 문제의 기본적인 상태를 입력 할 수 있습니다. <br/>
+																		* 좌측은 문제 및 정답을 편집 할 수 있는 화면이고 우측은 모바일 미리보기 화면 입니다. <br/>
+																		* 문제 및 정답을 편집 할 수 있게 CkEditor를 사용하였고 수식 표현을 위해 MathJax 라이브러리를 사욯했습니다.<br/>
+																		* 문제 및 정답을 편집하면서 모바일 앱에 어떻게 표현이 되는지 확인을 하고 작업을 하기 위함이 주 목적입니다.
+																	</div>
+																</div>
+																
+																<a class="prev" onclick="plusStemSlides(-1)" style="color : #0d6efd!important; left : 0; text-decoration: none;">❮</a>
+																<a class="next" onclick="plusStemSlides(1)" style="color : #0d6efd!important; text-decoration: none;">❯</a>															
+															</div>
+															
+															<br/>
+															<div style="text-align:center">
+															  <span class="stemdot dot" onclick="currentStemSlide(1)"></span> 
+															  <span class="stemdot dot" onclick="currentStemSlide(2)"></span> 
+															  <span class="stemdot dot" onclick="currentStemSlide(3)"></span> 
+															  <span class="stemdot dot" onclick="currentStemSlide(4)"></span> 
+															  <span class="stemdot dot" onclick="currentStemSlide(5)"></span> 
+															  <span class="stemdot dot" onclick="currentStemSlide(6)"></span> 
+															  <span class="stemdot dot" onclick="currentStemSlide(7)"></span> 
+															  <span class="stemdot dot" onclick="currentStemSlide(8)"></span> 
+															</div>
+															
+														</div>
+														<div class="modal-footer">
+															<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="color : white!important;">Close</button>
+														</div>
+													</div>
+												</div>
+											</div>
+									</span></td>
+								</tr>
+								<!-- <tr>
+									<th class="table-title" scope="col">개발한 프로젝트 서비스</th>
+									<td>
+										<div>[회사명] + 서비스명 + 서비스의 간략한 개요</div>
+										<div>#검색연관키워드 #검색연관키워드 #검색연관키워드 #검색연관키워드 #검색연관키워드 #검색연관키워드 #검색연관키워드</div>
+										<div>
+											<span class="badge bg-renewal">Renewal</span> <span class="badge bg-grey">React</span> <span class="badge bg-grey">Redux</span> <span class="badge bg-grey">JavaScript ES6</span> <span class="badge bg-grey">HTML5 and CSS3</span> <span class="badge bg-grey">Bootstrap 4</span> <span class="badge bg-grey">Node.js</span> <span class="badge bg-grey">Koa</span> <span class="badge bg-grey">MongoDB</span> <span class="badge bg-grey">AWS EC2</span>
+										</div>
+									</td>
+									<td class="text-center">
+										<div class="">(3M/M)</div>
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped bg-info" style="width: 100%">
+												<span class="progress-desc">100%</span>
+											</div>
+										</div>
+										<div class="progress-desc">백앤드 일부 개발</div>
+									</td>
+									<td class="text-center"><span class="text-muted"> <i class="bi bi-file-earmark-slides"></i>
+									</span></td>
+								</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<div class="table-desc fonsiz-xs fonwei-kr-sm letsp-sm text-center color-basic-opac">프로젝트들은 최근 개발한 순으로 정렬되어 있습니다<br/>공수가 작은 프로젝트는 포트폴리오에서 생략하였습니다.</div>
+				</div>
+			</div>
+		</section>
+		<!-- Project 끝 -->
+		<!-- Awards 시작 -->
+
+		<section class="container pt mt mb-5" id="stacks">
+			<h2 class="section-header fonsiz-xxxl fonwei-en-xxl letsp-sm text-upper color-basic">Stacks</h2>
+			<div class="section-desc fonsiz-sm color-basic-opac letsp-sm ws-xs mt-2 mb-4">만들고자 하는 목표에 대해 필요한 기술들을 빠르게 습득하고 구현합니다. 할 수 있는 경계선을 더 넓혀 나가고자 합니다.</div>
+			<div class="card shadow">
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-hover align-middle">
+							<thead>
+								<tr class="fonsiz-sm fonwei-kr-md letsp-sm color-basic-opac text-center vertmid">
+									<th style="width : 100px; text-align : left;">기술 구분</th>
+									<th>로고</th>
+									<th>활용 수준</th>
+									<th>평가</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="col" class="table-title letsp-md">Java</th>
+									<td>
+										<a href="https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" target="_blank"> 
+										<img src="/myPortPolio/resources/logo_img/Java_Logo.png" alt="Java Logo" />
+										</a>
+									</td>
+									<td>
+										<span class="ls-0">Java</span>를 줄곧 다뤄왔으며 웹 프로젝트만이 아닌 모듈화를 통한 플러그인 개발도 가능합니다.<br /> 
+										개발환경은 <span class="ls-0">JDK</span>버전 1.8 , 11 을 많이 사용 하였습니다. 복잡한 코드가 아닌 객체지향성, 코드 재사용성을 높히기 위한 노력을 많이 하고 있습니다.</td>
+									<td>
+										<div class="star-icon text-center">
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col" class="table-title letsp-md">Jsp</th>
+									<td>
+										<a href="https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" target="_blank"> 
+										<img src="/myPortPolio/resources/logo_img/jsp-logo.png" alt="jsp Logo" />
+										</a>
+									</td>
+									<td>
+										<span class="ls-0">Java</span> 를 기반으로 하고 있는 스크립트 언어와  <span class="ls-0">UI</span>영역의 작업도 가능합니다.<br /> 
+										<span class="ls-0">JSTL</span> 을 가장 많이 사용하며 웹 스토리지 객체를 사용한 개발, SiteMesh를 활용한 화면 구성도 가능합니다.
+									<td>
+										<div class="star-icon text-center">
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star"></i>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col" class="table-title letsp-md">JavaScript</th>
+									<td><a href="https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" target="_blank"> <img src="/myPortPolio/resources/assets/img/js.png" alt="JavaScript Logo" />
+									</a></td>
+									<td><span class="ls-0">JavaScript</span> 를 활용한 개발이 가능하며 외부 라이브러리 사용 또한 가능합니다.<br /> 
+									브라우저 환경의 <span class="ls-0">JavaScript</span>의 경우 브라우저 호환성을 중요시하여 IE 환경에서도 정상 작동하도록 개발하고 있으며 최신 문법인 <span class="ls-0">ES6</span> 또한 습득하기 위해 노력하고 있습니다.</td>
+									<td>
+										<div class="star-icon text-center">
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star"></i>
+										</div>
+									</td>
+								</tr>								
+								<tr>
+									<th scope="col" class="table-title letsp-md">JQuery</th>
+									<td>
+										<a href="https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" target="_blank"> 
+										<img src="/myPortPolio/resources/logo_img/jquery.png" alt="jquery Logo" />
+										</a>
+									</td>
+									<td>
+										<span class="ls-0">JavaScript</span> 에서 사용하는 DOM 작업을 쉽게 쓰게 해주는 <span class="ls-0">JQuery</span>도 가능합니다.<br /> 
+										JQuery와 함께 가장 많이 쓰이는 Ajax 또한 많이 사용했습니다.
+									<td>
+										<div class="star-icon text-center">
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star"></i>
+										</div>
+									</td>
+								</tr>															
+								<tr>
+									<th scope="col" class="table-title letsp-md">Spring</th>
+									<td>
+										<a href="https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" target="_blank"> 
+										<img src="/myPortPolio/resources/logo_img/spring.png" alt="Spring Logo" />
+										</a>
+									</td>
+									<td>
+										Spring Framework, Spring Boot, Spring MVC 을 자주 사용했습니다. Spring은 4 버전을 가장 많이 사용, Boot는 2버전을 사용했습니다. <br /> 
+										최근에는 Spring JPA를 배워야 겠다는 필요성을 느끼고 프로젝트에 도입 또는 개인적으로 공부하고 있습니다.
+									<td>
+										<div class="star-icon text-center">
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star"></i>
+										</div>
+									</td>
+								</tr>														
+								<tr>
+									<th scope="col" class="table-title letsp-md">Postgresql</th>
+									<td>
+										<a href="https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" target="_blank"> 
+										<img src="/myPortPolio/resources/logo_img/postgresql.jpeg" alt="Spring Logo" />
+										</a>
+									</td>
+									<td>
+										로그성 데이터 처럼 대량 데이터를 처리하기 위해 Postgresql을 사용한적이 있습니다. 다양한 프로그래밍 언어에서도 지원하여 사내 프로젝트에 도입해 제품화를 했습니다.<br /> 
+										서버 설치 및 DB 구성도 가능하며 Slow Query에 대한 분석 및 튜닝이 어느정도 가능합니다.
+									<td>
+										<div class="star-icon text-center">
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star"></i>
+											<i class="bi bi-star"></i>
+										</div>
+									</td>
+								</tr>													
+								<tr>
+									<th scope="col" class="table-title letsp-md">Cubrid DB</th>
+									<td>
+										<a href="https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" target="_blank"> 
+										<img src="/myPortPolio/resources/logo_img/cubrid-logo.png" alt="Cubrid Logo" />
+										</a>
+									</td>
+									<td>
+										재직중인 회사에서 가장 많이 취급했던 오픈소스 기반의 RDBMS 입니다. Oracle을 기반으로 만들어진 DB 입니다.<br />
+										DB Manager도 능숙하게 다룰 수 있으며 DB 이중화 작업도 직접 고객사 환경에 맞춰 구축한 적이 있습니다.<br/>
+										서버 설치 및 DB 구성도 가능하며 Slow Query에 대한 분석 및 튜닝이 가능합니다.
+									<td>
+										<div class="star-icon text-center">
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col" class="table-title letsp-md">Oracle</th>
+									<td>
+										<a href="https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" target="_blank"> 
+										<img src="/myPortPolio/resources/logo_img/oracle.png" alt="Oracle Logo" />
+										</a>
+									</td>
+									<td>
+										통합로그시스템을 구축할 때 사용한 DBMS이며 고성능 트랜잭션 처리를 위해 도입했었습니다.<br /> 
+										잦은 트랜잭션으로 여러 솔루션에서 로그를 쌓아야 하는 시스템을 성공적으로 구축하기 위해 사용했습니다.<br/>
+										Cubrid DB와 사용법이 유사하여 다루는것이 어렵지 않았습니다.
+									<td>
+										<div class="star-icon text-center">
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star"></i>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col" class="table-title letsp-md">Mssql</th>
+									<td>
+										<a href="https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" target="_blank"> 
+										<img src="/myPortPolio/resources/logo_img/mssql.svg" alt="Mssql Logo" />
+										</a>
+									</td>
+									<td>
+										보안솔루션 특성상 자사 솔루션 외의 여러 솔루션을 다뤄보게 되는데 이때 가장 많이 다뤄본 DB가 Mssql 입니다.<br /> 
+										Cubrid DB, Oracle 보다는 사용한 횟수는 조금 적지만 사용하는 것에 대해 어렵거나 부담을 느끼는 수준은 아닙니다.
+									<td>
+										<div class="star-icon text-center">
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star"></i>
+											<i class="bi bi-star"></i>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col" class="table-title letsp-md">Html & CSS</th>
+									<td>
+										<a href="https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" target="_blank"> 
+										<img src="/myPortPolio/resources/logo_img/CSS3_and_HTML5_logos_and_wordmarks.svg.png" alt="Html Logo" />
+										</a>
+									</td>
+									<td>
+										HTML과 CSS의 기본적인 문법을 이해하고 사용할 수 있습니다. 프론트엔드쪽에 전문성이 뛰어난 편은 아니지만 부트스트랩을 사용하여 화면 작업을 할 수 있습니다. <br/>
+									<td>
+										<div class="star-icon text-center">
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star"></i>
+											<i class="bi bi-star"></i>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col" class="table-title letsp-md">Apache Tomcat</th>
+									<td>
+										<a href="https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8" target="_blank"> 
+										<img src="/myPortPolio/resources/logo_img/Apache_Tomcat_Logo.png" alt="apache  Logo" />
+										</a>
+									</td>
+									<td>
+										Apache와 Tomcat을 설치하여 서버 환경을 구성 할 수 있습니다. Apache Vhost를 통한 구성도 가능하며 worker 개념을 통해 다중 톰캣 구성, 다중 AP 환경에서 세션 공유도 가능합니다.	Apache는 2.4버전 Tomcat은 8,9 버전을 사용했습니다.
+									<td>
+										<div class="star-icon text-center">
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star"></i>
+										</div>
+									</td>
+								</tr>
+								<!-- <tr>
+									<th scope="col" class="table-title letsp-md">Node.js</th>
+									<td><a href="https://ko.wikipedia.org/wiki/Node.js" target="_blank"> <img src="/resources/assets/svg/nodejs.svg" alt="Node.js Logo" />
+									</a></td>
+									<td><span class="ls-0">Node.js</span>로 <span class="ls-0">Express, Koa</span>등 웹 개발 프레임워크를 구축할 수 있으며, <span class="ls-0">React</span>와 <span class="ls-0">MERN Stack</span> 방식으로 조합하여 개발할 수 있습니다<br /> <span class="ls-0">Handlebars, Liquid</span>와 같은 <span class="ls-0">Template Engine</span>을 <span class="ls-0">View</span> 형태로 제공하여 구축하거나 서버 로깅 등을 할 수 있습니다</td>
+									<td>
+										<div class="star-icon text-center">
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i>
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star-fill"></i> 
+											<i class="bi bi-star"></i>
+										</div>
+									</td>
+								</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<div class="table-desc fonsiz-xs fonwei-kr-sm letsp-sm text-center color-basic-opac">객관화하기 어려운 관계로, 제가 이해하고 구현할 수 있는 수준을 작성했습니다.</div>
+				</div>
+			</div>
+		</section>
+		<section id="charts" class="container">
+			<div class="row">
+				<div class="col-sm-6 col-lg-3 d-flex align-items-stretch">
+					<div class="card mb-3">
+						<div class="pt-5 pb-4">
+							<canvas id="chart1"></canvas>
+						</div>
+						<div class="card-body">
+							<div>
+								<h4 class="card-title fonsiz-xl fonwei-en-xxl letsp-xxl text-upper text-center text-primary">Front End</h4>
+							</div>
+							<div class="card-text fonsiz-sm fonwei-kr-sm letsp-sm mb-3 mt-3 px-2">
+								<span class="ls-0">JavaScript, JQuery</span>를 가장 많이 사용해 왔습니다. CSS와 Bootstrap도 이해하며 사용 할 수 있습니다.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3 d-flex align-items-stretch">
+					<div class="card mb-3">
+						<div class="pt-5 pb-4">
+							<canvas id="chart2"></canvas>
+						</div>
+						<div class="card-body">
+							<h4 class="card-title fonsiz-xl fonwei-en-xxl letsp-xxl text-upper text-center text-primary">Back end</h4>
+							<div class="card-text fonsiz-sm fonwei-kr-sm letsp-sm mb-3 mt-3 px-2">
+								<span class="ls-0">Java, Spring</span>를 가장 많이 사용하며 주력 언어 입니다. 보조 언어로는 Python을 사용하며 초급수준의 능력을 갖고 있습니다.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3 d-flex align-items-stretch">
+					<div class="card mb-3">
+						<div class="pt-5 pb-4">
+							<canvas id="chart3"></canvas>
+						</div>
+						<div class="card-body">
+							<h4 class="card-title fonsiz-xl fonwei-en-xxl letsp-xxl text-upper text-center text-primary">Data base</h4>
+							<div class="card-text fonsiz-sm fonwei-kr-sm letsp-sm mb-3 mt-3 px-2">
+								<span class="ls-0">Cubrid</span>를 가장 많이 사용했고 Oracle, MSSQL, PostgreSQL도 사용 할 수 있습니다.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-3 d-flex align-items-stretch">
+					<div class="card mb-3">
+						<div class="pt-5 pb-4">
+							<canvas id="chart4"></canvas>
+						</div>
+						<div class="card-body">
+							<h4 class="card-title fonsiz-xl fonwei-en-xxl letsp-xxl text-upper text-center text-primary">Utilities</h4>
+							<div class="card-text fonsiz-sm fonwei-kr-sm letsp-sm mb-3 mt-3 px-2">
+								<span class="ls-0">Redmine, SVN, Git, Slack</span> 등 여러가지 유틸을 사용해보고 더 많이 알수록 효율은 더 높아진다고 믿습니다.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- <section class="container pt mt" id="education">
+			<h2 class="section-header fonsiz-xxxl fonwei-en-xxl letsp-sm text-upper color-basic">Education</h2>
+			<div class="section-desc fonsiz-sm color-basic-opac letsp-sm ws-xs mt-2 mb-4">오직 한길만 보고 성실하게, 열심히 노력해 왔습니다. 항상 최선을 다하고 더 높은 것을 추구합니다.</div>
+			<div class="row">
+				<div class="col-sm-12 col-lg-4">
+					<div class="card mb-3">
+						<img src="/myPortPolio/resources/logo_img/university_1.jpg" class="card-img-top" alt="Profile Picture" />
+						<div class="card-body p-4">
+							<h5 class="card-title fonsiz-xxl fonwei-kr-xl letsp-sm">국가평생교육진흥원 학사</h5>
+							<p class="card-text fonsiz-sm fonwei-kr-sm color-basic-opac letsp-sm">
+								 <span class="ls-0">정보통신공학</span> 전공
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-lg-4">
+					<div class="card mb-3">
+						<img src="/myPortPolio/resources/logo_img/university_2.jpg" class="card-img-top" alt="Profile Picture" />
+						<div class="card-body p-4">
+							<h5 class="card-title fonsiz-xxl fonwei-kr-xl letsp-sm">동양미래대학교</h5>
+							<p class="card-text fonsiz-sm fonwei-kr-sm color-basic-opac letsp-sm">
+								<span class="ls-0">네트워크 정보통신학</span> 전공
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-lg-4">
+					<div class="card mb-3">
+						<img src="/myPortPolio/resources/logo_img/high_school.gif" class="card-img-top" alt="Profile Picture" />
+						<div class="card-body p-4">
+							<h5 class="card-title fonsiz-xxl fonwei-kr-xl letsp-sm">광명 명문고등학교 이과</h5>
+							<p class="card-text fonsiz-sm fonwei-kr-sm color-basic-opac letsp-sm">
+								2021년 스탠포드 대학 가을 학기 컴퓨터 공학과 박사 과정 <span class="ls-0">Web, Game, Data Analysis, Machine Learning</span> 분야
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<section class="container pt mt" id="document">
+			<div class="row">
+				<div class="col-lg-7 mx-auto text-center mb-5">
+					<h2 class="section-header fonsiz-xxxl fonwei-en-xxl letsp-sm text-upper color-basic">Document</h2>
+					<p class=" fonsiz-sm color-basic fonsiz-xl fonwei-kr-xs lh-md letsp-xs ws-sm my-4">
+						<span class="fonwei-kr-md">신규개발</span> 또는 <span class="fonwei-kr-md">유지보수</span>를 하면서 가장 중요하게 느낀것은 늘 <span class="fonwei-kr-md">기록</span>하며 남기는 것을 가장 중요하다고 생각합니다.
+						단순히 머리속으로 생각하며 개발하는 것은 어느정도 한계가 있다고 생각되며 추후에 <span class="fonwei-kr-md">리마인드</span>를 할때 어려움이 있습니다.
+						작은 <span class="fonwei-kr-md">단위테스트 기능</span>을 추가하더라도 문서를 남기려 최대한 노력하고 있습니다. 
+						또한<span class="fonwei-kr-md"> 엔지니어와 협업 혹은 고객의 문의</span>로 부터 응대를 위해서도 문서를 만들어 업무 처리를 하는것이 도움이 많이 된다고 생각합니다.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="container">
+			<div class="row">
+				<div class="col-lg-8 mx-auto text-center">
+					<div class="owl-carousel owl-theme">
+						<div class="item">
+							<div style="width: 100%; height: 0px">
+								<img src="/myPortPolio/resources/assets/img/document/1.PNG" alt="">
+							</div>
+							<div class="fonsiz-sm fonwei-kr-sm letsp-sm color-basic-opac mt-3">
+								<span class="letsp-md"> 신규개발 - EndPoint 보안솔루션 - 추가개발 설계 - 1</span>
+							</div>
+						</div>
+						<div class="item">
+							<div style="width: 100%; height: 0px">
+								<img src="/myPortPolio/resources/assets/img/document/2.PNG" alt="">
+							</div>
+							<div class="fonsiz-sm fonwei-kr-sm letsp-sm color-basic-opac mt-3">
+								<span class="letsp-md">신규개발 - EndPoint 보안솔루션 - 추가개발 설계 - 2</span>
+							</div>
+						</div>
+						<div class="item">
+							<div style="width: 100%; height: 0px">
+								<img src="/myPortPolio/resources/assets/img/document/3.PNG" alt="">
+							</div>
+							<div class="fonsiz-sm fonwei-kr-sm letsp-sm color-basic-opac mt-3">
+								<span class="letsp-md">신규개발 - EndPoint 보안솔루션 - 추가개발 설계 - 3</span>
+							</div>
+						</div>
+						<div class="item">
+							<div style="width: 100%; height: 0px">
+								<img src="/myPortPolio/resources/assets/img/document/4.PNG" alt="">
+							</div>
+							<div class="fonsiz-sm fonwei-kr-sm letsp-sm color-basic-opac mt-3">
+								<span class="letsp-md">신규개발 - EndPoint 보안솔루션 - 추가개발 설계 - 4</span>
+							</div>
+						</div>
+						<div class="item">
+							<div style="width: 100%; height: 395px">
+								<img src="/myPortPolio/resources/assets/img/document/5.PNG" alt="">
+							</div>
+							<div class="fonsiz-sm fonwei-kr-sm letsp-sm color-basic-opac mt-3">
+								<span class="letsp-md">유지보수 - 접근통제 시스템 WFA - 1</span>
+							</div>
+						</div>
+						<div class="item">
+							<div style="width: 100%; height: 395px">
+								<img src="/myPortPolio/resources/assets/img/document/6.PNG" alt="">
+							</div>
+							<div class="fonsiz-sm fonwei-kr-sm letsp-sm color-basic-opac mt-3">
+								<span class="letsp-md">유지보수 - 접근통제 시스템 WFA - 2</span>
+							</div>
+						</div>
+						<div class="item">
+							<div style="width: 100%; height: 395px">
+								<img src="/myPortPolio/resources/assets/img/document/7.PNG" alt="">
+							</div>
+							<div class="fonsiz-sm fonwei-kr-sm letsp-sm color-basic-opac mt-3">
+								<span class="letsp-md">유지보수 - 접근통제 시스템 WFA - 3</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- contact 시작  -->
+		<section class="container pt mt" id="contact">
+			<div class="row">
+				<div class="col-lg-7 mx-auto text-center mb-5">
+					<!-- <h2 class="section-header fonsiz-xxxl fonwei-en-xxl letsp-sm text-upper color-basic">Contact</h2> -->
+					<p class=" fonsiz-sm color-basic fonsiz-xl fonwei-kr-xs lh-md letsp-xs ws-sm my-4">
+						여기까지 읽어 주셔서 고맙습니다. <br /> 더 성실하게, 항상 최선을 다하겠습니다.
+					</p>
+				</div>
+			</div>
+		</section>
+		<!-- Contact 끝  -->
+	</main>
+	<!-- Main 끝 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"></script>
+	<script src="/myPortPolio/resources/js/script.js"></script>
+	<script>
+		///////////////// common////////////////////
+		let slideIndex = 1;
+		let slidePPIndex = 1;
+		let slideVPNIndex = 1;
+		let slideWFAIndex = 1;
+		showStemSlides(slideIndex);
+		showPPSlides(slidePPIndex);
+		showVPNSlides(slideVPNIndex);
+		showWFASlides(slideWFAIndex);
+		////////////////////////////////////////////
+	
+		function plusStemSlides(n) {
+		  showStemSlides(slideIndex += n);
+		}
+	
+		function currentStemSlide(n) {
+		  showStemSlides(slideIndex = n);
+		}
+	
+		function showStemSlides(n) {
+		  
+			let i;
+			let slides = document.getElementsByClassName("stemMySlides");
+			let dots = document.getElementsByClassName("stemdot");
+			
+			
+
+			$("#totalStemPage").text( slides.length );
+			$("#currentStemPage").text( n );
+			
+			
+			if (n > slides.length) {
+				slideIndex = 1
+			}
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
+		
+		////////////////////////////////////////////////////
+		
+		
+		
+		function plusPPSlides(n) {
+		  showPPSlides(slidePPIndex += n);
+		}
+	
+		function currentPPSlide(n) {
+		  showPPSlides(slidePPIndex = n);
+		}
+	
+		function showPPSlides(n) {
+		  
+			let i;
+			let slides = document.getElementsByClassName("ppSlides");
+			let dots = document.getElementsByClassName("ppdot");
+			
+			
+
+			$("#totalPPPage").text( slides.length );
+			$("#currentPPPage").text( n );
+			
+			
+			if (n > slides.length) {
+				slidePPIndex = 1
+			}
+			if (n < 1) {
+				slidePPIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slidePPIndex - 1].style.display = "block";
+			dots[slidePPIndex - 1].className += " active";
+		}
+		
+		
+		
+		///////////////////////////////////////////////////////////////////////////
+		
+		
+		function plusVPNSlides(n) {
+			showVPNSlides(slideVPNIndex += n);
+		}
+	
+		function currentVPNSlide(n) {
+			showVPNSlides(slideVPNIndex = n);
+		}
+	
+		function showVPNSlides(n) {
+		  
+			let i;
+			let slides = document.getElementsByClassName("vpnSlides");
+			let dots = document.getElementsByClassName("vpndot");
+			
+			
+
+			$("#totalVPNPage").text( slides.length );
+			$("#currentVPNPage").text( n );
+			
+			
+			if (n > slides.length) {
+				slideVPNIndex = 1
+			}
+			if (n < 1) {
+				slideVPNIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideVPNIndex - 1].style.display = "block";
+			dots[slideVPNIndex - 1].className += " active";
+		}
+		
+		
+		///////////////////////////////////////////////////////////////////////////////
+		
+		
+		function plusWFASlides(n) {
+			showWFASlides(slideWFAIndex += n);
+		}
+	
+		function currentWFASlide(n) {
+			showWFASlides(slideWFAIndex = n);
+		}
+	
+		function showWFASlides(n) {
+		  
+			let i;
+			let slides = document.getElementsByClassName("wfaSlides");
+			let dots = document.getElementsByClassName("wfadot");
+			
+			
+
+			$("#totalWFAPage").text( slides.length );
+			$("#currentWFAPage").text( n );
+			
+			
+			if (n > slides.length) {
+				slideWFAIndex = 1
+			}
+			if (n < 1) {
+				slideWFAIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideWFAIndex - 1].style.display = "block";
+			dots[slideWFAIndex - 1].className += " active";
+		}
+		
+		
+		
+	</script>
+</body>
+</html>
